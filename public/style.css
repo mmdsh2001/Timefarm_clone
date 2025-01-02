@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {
+  font-family: "Nanum Gothic", serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+.App{
+  height: 100vh;
+  position: relative;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.header{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  
+}
+
+#userInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+#headerBottons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+#upgradeBotton button {
+  background-color: darkblue; /* Change background color to dark blue */
+  color: white; /* Change text color to white */
+  font-weight: bold;
+  
+  width: 90%; /* Adjust width to be smaller */
+  height: 20px; /* Decrease height */
+  margin-left: 10%; /* Adjust margins as needed */
+  margin-right: 10%;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /* New styles for button design */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer */
+  padding: 5px; /* Decrease padding for smaller buttons */
+  font-size: medium; /* Decrease font size */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#moreBotton button{
+
+  
+    border-radius: 20px;
+
+    /* New styles for button design */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 5px; /* Decrease padding for smaller buttons */
+    font-size: medium; /* Decrease font size */
+    transition: background-color 0.3s;
+
+}
+
+#upgradeBotton button:hover, #moreBotton button:hover {
+  background-color: lightblue; /* Change background color on hover */
+}
+
+#upgradeBotton button{
+  padding: 14px;
+  border-radius: 20px;
+}
+
+#score{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#score p{
+  font-size: xx-large;
+}
+
+#progressInfo {
+  width: 100%; /* Ensure it takes full width */
+  margin-right: 6%; 
+  display: flex; /* Ensure it behaves as a block element */
+}
+
+
+#start_progressBar ,#claim_progressBar {
+  background-color: darkblue; /* Change background color to dark blue */
+  color: white; /* Change text color to white */
+  width: 100%;
+  height: 50px;
+  margin-left: 6%;
+  margin-right: 6%;
+  border-radius: 10px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /* New styles for button design */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer */
+  padding: 10px; /* Add padding for better click area */
+  font-size: large; /* Increase font size */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#start_progressBar:hover , #claim_progressBar:hover {
+  background-color: lightblue; /* Change background color on hover */
+}
+
+#progressBar{
+  background-color: lightblue;
+  color: white;
+  width: 100%;
+  height: 50px;
+  margin-left: 6%;
+  margin-right: 6%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden; /* Ensures the fill doesn't overflow */
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#progressFill {
+  height: 100%; /* Fill the height of the progress bar */
+  background-color: #76c7c0; /* Color of the filled portion */
+  transition: width 0.5s ease; /* Smooth transition for filling */
+}
+
+
+#farmingInfo, #rightSideElement {
+  position: absolute; /* Positioning elements inside the progress bar */
+  top: 50% ;
+  transform: translateY(-50%);
+}
+
+#farmingInfo {
+  display: flex;
+  flex-direction: row;
+  left: 10px; /* Adjust as needed */
+}
+
+#rightSideElement {
+  right: 10px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+}
+
+#acceleratorInfo{
+
+  margin-right:1% ;
+
+}
+
+
+#remainingTime{
+  padding-right: 20px;
+}
+
+.footermenu{
+  /* background-color:rgb(56, 231, 231); */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 5px solid rgb(175, 175, 175);
+  margin-top: 10%;
+  padding-top: 4%;
+
+}
+
+.footermenu button{
+
+  color: rgb(78, 78, 78); 
+  border: none; /* Remove default button border */
+  padding: 10px 20px; /* Add padding for spacing */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.2s ease; /* Smooth transition for background color */
+  border-radius: 20px; /* Rounded corners for buttons */
+  margin: 10px; /* Add margin for spacing */
+}
+
+.footermenu p{
+  font-weight: lighter;
+  color: rgb(98, 97, 97);
+}
+
+
+.nanum-gothic-regular {
+  font-family: "Nanum Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
