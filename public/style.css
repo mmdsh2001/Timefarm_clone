@@ -7,8 +7,12 @@ body {
 }
 
 .App{
-  height: 100vh;
+  height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .material-symbols-outlined {
@@ -190,33 +194,50 @@ body {
 
 .footermenu{
   /* background-color:rgb(56, 231, 231); */
-
+  width: 100%;
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
   align-items: center;
 
-  border-top: 5px solid rgb(175, 175, 175);
-  margin-top: 10%;
+  border-top: 1px solid rgb(175, 175, 175);
+  margin-top: 25px;
   padding-top: 4%;
 
 }
 
 .footermenu button{
-
-  color: rgb(78, 78, 78); 
+  background: #ffffff;
+  min-width: 24px;
+  color: rgb(160, 159, 159); 
   border: none; /* Remove default button border */
-  padding: 10px 20px; /* Add padding for spacing */
-  font-size: 16px; /* Adjust font size */
+  /* padding: 10px 20px;  */
+  /* font-size: 16px;  */
   cursor: pointer; /* Change cursor to pointer on hover */
   transition: background-color 0.2s ease; /* Smooth transition for background color */
   border-radius: 20px; /* Rounded corners for buttons */
-  margin: 10px; /* Add margin for spacing */
+  margin: 0px; /* Add margin for spacing */
+
+  flex: 1 1 auto; /* Allow buttons to grow and shrink */
+
+}
+
+.footermenu button:hover{
+  color: blue; /* Change background color on hover */
+
+}
+
+.footermenu div:hover p {
+  color: blue; /* Change paragraph font color to blue on hover */
 }
 
 .footermenu p{
+  flex: 1 1 100%; /* Allow paragraph to grow and shrink */
+  font-size: small;
   font-weight: lighter;
   color: rgb(98, 97, 97);
+  text-align: center;
 }
 
 
@@ -225,6 +246,7 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
 
 
 
