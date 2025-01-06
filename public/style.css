@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 body {
+  background: #ffffff;
   font-family: "Nanum Gothic", serif;
   font-size: large;
   font-weight: bold;
