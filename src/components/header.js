@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header() {
+function Header(fname) {
   return (
     <div class = 'header' >
         
@@ -13,7 +13,7 @@ function Header() {
             </div>
 
             <div id='username'>
-                john doe
+                {fname.fname}
             </div>
 
         </div>

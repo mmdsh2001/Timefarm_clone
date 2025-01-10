@@ -6,14 +6,14 @@ import ClaimProgress from './ClaimProgress';
 /**
  * MainContent component that manages the farming process and displays progress.
  */
-function MainContent() {
+function MainContent(points) {
   // config const
-  const farmingTime = 60*1; //in seconds
+  const farmingTime = 6*1; //in seconds
   
   // State variables
   const [isFarmingActive, setIsFarmingActive] = useState(false); // Tracks if farming is active
   const [count, setCount] = useState(0); // Counts the farming progress
-  const [score, setScore] = useState(0); // Tracks the user's score
+  const [score, setScore] = useState(points.points); // Tracks the user's score
   const [showStartProgressbar, setShowStartProgressbar] = useState(false); // Toggles the StartProgressbar visibility
   const [remainingTime, setRemainingTime] = useState(farmingTime); // Tracks the remaining time for farming
 
@@ -30,12 +30,37 @@ function MainContent() {
     setCount(prevCount => prevCount + 1);
   };
 
+  const updateScoreRequest = async (newScore) => {
+    try {
+      const response = await fetch("http://127.0.0.1:5000//updatepoints/tr2xRPF58hrkqL04mVrb", {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ "points": newScore }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const result = await response.json();
+      console.log(result);
+      return result;
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+      throw error;
+    }
+  };
+ 
+
   // Handles the claim button click
   const handleClaimClick = () => {
     setShowStartProgressbar(true);
     setIsFarmingActive(false);
     setCount(0); // Reset count when claiming
     setScore(prevScore => prevScore + count); // Update score with the current count
+    updateScoreRequest(score + count)
   };
 
   // Effect to manage the farming interval and remaining time
