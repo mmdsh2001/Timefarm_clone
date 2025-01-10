@@ -13,7 +13,7 @@ function App() {
 
 
 
-  const initData = Telegram.WebApp.initData;
+  const initData = window.Telegram.WebApp.initData;
 
   const params = new URLSearchParams(initData);
   const user = JSON.parse(params.get('user'));
